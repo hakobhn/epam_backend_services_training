@@ -1,0 +1,10 @@
+{
+	"namespace": "com.epam.training.backend_services.avro_messaging.model",
+	"type": "record",
+	"name": "Message",
+	"fields": [
+		{"name": "id",  "type": ["int", "null"]},
+		{"name": "timestamp", "type": "string"},
+        {"name": "payload", "type": ["string", "null"]}
+	 ]
+}
