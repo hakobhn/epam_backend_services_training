@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Auth Demo | Users</title>
+</head>
+<body>
+<div th:replace="header :: header"></div>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title" th:text="${user.firstName} + ' ' + ${user.lastName}">User Full Name</h3>
+            <p th:text="'Email Address: ' + ${user.email}">Email address </p>
+            <a class="btn btn-primary btn-sm" href="#" th:href="@{mailto:{to}(to=${user.email})}">Send Email</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
